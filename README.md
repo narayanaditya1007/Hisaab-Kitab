@@ -1,2 +1,2 @@
 # Hisaab-Kitab
-#### A daily expense analyser
+A daily expense analyser
