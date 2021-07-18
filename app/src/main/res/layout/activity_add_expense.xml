@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddExpense">
+
+    <ImageView
+        android:id="@+id/theme"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="12dp"
+        android:scaleType="fitStart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/theme" />
+
+    <TextView
+        android:id="@+id/tv_Tid"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="6dp"
+        android:gravity="left"
+        android:paddingStart="24dp"
+        android:text="Remarks: "
+        android:textSize="28sp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_Amount"
+        app:layout_constraintEnd_toStartOf="@+id/et_TID"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/theme" />
+
+    <EditText
+        android:id="@+id/et_TID"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:layout_marginEnd="36dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_Tid"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tv_Tid"
+        app:layout_constraintTop_toTopOf="@+id/tv_Tid"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/tv_Amount"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="42dp"
+        android:layout_marginEnd="6dp"
+        android:gravity="left"
+        android:paddingStart="24dp"
+        android:text="Amount: "
+        android:textSize="28sp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_Date"
+        app:layout_constraintEnd_toStartOf="@+id/et_Amount"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_Tid" />
+
+    <EditText
+        android:id="@+id/et_Amount"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:layout_marginEnd="36dp"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_Amount"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tv_Amount"
+        app:layout_constraintTop_toTopOf="@+id/tv_Amount"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/tv_Date"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="42dp"
+        android:layout_marginEnd="6dp"
+        android:gravity="left"
+        android:paddingStart="24dp"
+        android:text="Date: "
+        android:textSize="28sp"
+        app:layout_constraintEnd_toStartOf="@+id/et_Date"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_Amount" />
+
+    <EditText
+        android:id="@+id/et_Date"
+        android:layout_width="115dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:layout_marginEnd="12dp"
+        android:inputType="date"
+        android:paddingStart="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_Date"
+        app:layout_constraintEnd_toEndOf="@id/calender"
+        app:layout_constraintStart_toEndOf="@id/tv_Date"
+        app:layout_constraintTop_toTopOf="@+id/tv_Date"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="82dp"
+        android:layout_marginBottom="124dp"
+        android:onClick="add"
+        android:text="Submit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_Date" />
+
+    <ImageButton
+        android:id="@+id/calender"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginEnd="24dp"
+        android:onClick="showPickerDialog"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="@+id/et_Date"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/et_Date"
+        app:layout_constraintTop_toTopOf="@+id/et_Date"
+        app:srcCompat="@drawable/date" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
